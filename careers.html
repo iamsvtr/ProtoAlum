@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .job-listing {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .job-listing:hover {
+            background-color: #f1f1f1;
+        }
+        .job-details {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">CAREERS</div>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4" id="jobListings"></div>
+            <div class="col-md-8">
+                <div class="job-details" id="jobDetails">
+                    <h4 class="text-danger fw-bold">Select a job to view details</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const jobs = [
+            {
+                title: "Logistics Coordinator",
+                company: "MoveFast Logistics",
+                location: "Manila, Philippines",
+                salary: "35,000 PHP",
+                type: "FT",
+                description: "Join our growing logistics team...",
+                responsibilities: ["Plan and monitor shipments", "Coordinate with suppliers"],
+                qualifications: ["Bachelor’s degree in Supply Chain", "Strong organizational skills"],
+                benefits: ["Meal and transportation allowance", "Comprehensive health insurance"]
+            },
+            {
+                title: "Software Engineer",
+                company: "Tech Solutions Inc.",
+                location: "Cebu, Philippines",
+                salary: "60,000 PHP",
+                type: "FT",
+                description: "Develop and maintain software applications...",
+                responsibilities: ["Write clean, efficient code", "Collaborate with cross-functional teams"],
+                qualifications: ["Degree in Computer Science", "Proficiency in JavaScript and Python"],
+                benefits: ["Remote work options", "Health and dental insurance"]
+            },
+            {
+                title: "Marketing Specialist",
+                company: "BrandBoost",
+                location: "Davao, Philippines",
+                salary: "45,000 PHP",
+                type: "FT",
+                description: "Plan and execute marketing campaigns...",
+                responsibilities: ["Analyze market trends", "Create engaging content"],
+                qualifications: ["Degree in Marketing or related field", "Strong communication skills"],
+                benefits: ["Flexible working hours", "Performance bonuses"]
+            }
+        ];
+
+        function displayJobs() {
+            const jobListings = document.getElementById("jobListings");
+            jobListings.innerHTML = "";
+            jobs.forEach((job, index) => {
+                const jobItem = document.createElement("div");
+                jobItem.classList.add("job-listing");
+                jobItem.innerHTML = `
+                    <h6 class="fw-bold text-danger">${job.title}</h6>
+                    <p class="mb-1">${job.company}</p>
+                    <p class="text-muted small">${job.description}</p>
+                    <p class="text-muted small">${job.location}</p>
+                `;
+                jobItem.onclick = () => loadJobDetails(index);
+                jobListings.appendChild(jobItem);
+            });
+        }
+
+        function loadJobDetails(index) {
+            const job = jobs[index];
+            document.getElementById("jobDetails").innerHTML = `
+                <h4 class="text-danger fw-bold">${job.title}</h4>
+                <p><strong>Company:</strong> ${job.company}</p>
+                <p><strong>Location:</strong> ${job.location} <strong>Salary:</strong> ${job.salary} <strong>Job Type:</strong> ${job.type}</p>
+                <hr>
+                <h5 class="fw-bold">Job Description</h5>
+                <p>${job.description}</p>
+                <h5 class="fw-bold">Job Responsibilities</h5>
+                <ul>${job.responsibilities.map(res => `<li>${res}</li>`).join('')}</ul>
+                <h5 class="fw-bold">Job Qualifications</h5>
+                <ul>${job.qualifications.map(qual => `<li>${qual}</li>`).join('')}</ul>
+                <h5 class="fw-bold">Job Benefits</h5>
+                <ul>${job.benefits.map(ben => `<li>${ben}</li>`).join('')}</ul>
+            `;
+        }
+
+        document.addEventListener("DOMContentLoaded", displayJobs);
+    </script>
+</body>
+</html>
