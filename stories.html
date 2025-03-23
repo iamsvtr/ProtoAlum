@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alumni Stories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #a10000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .header::after {
+            content: "";
+            width: 50px;
+            height: 4px;
+            background-color: gold;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .filter-section {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        Alumni Stories
+    </div>
+
+    <!-- Filter Section -->
+    <div class="container filter-section">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="courseFilter" class="form-label">Filter Stories</label>
+                <select class="form-select" id="courseFilter">
+                    <option value="all" selected>All Course</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="business">Business</option>
+                    <option value="arts">Arts</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="monthFilter" class="form-label">Month</label>
+                <select class="form-select" id="monthFilter">
+                    <option value="all" selected>All</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="yearFilter" class="form-label">Year</label>
+                    <select class="form-select" id="yearFilter">
+                    <option value="all" selected>All</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alumni Stories Grid -->
+    <div class="container">
+        <div class="row d-flex flex-wrap" id="stories-container">
+            <!-- Dynamic stories will be added here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const storiesContainer = document.getElementById("stories-container");
+            const stories = [
+                { title: "Engineer Success", course: "engineering", month: "january", year: "2024" },
+                { title: "Business Guru", course: "business", month: "february", year: "2025" },
+                { title: "Artistic Journey", course: "arts", month: "march", year: "2024" },
+                { title: "Tech Innovator", course: "engineering", month: "january", year: "2025" },
+                { title: "Startup Founder", course: "business", month: "february", year: "2024" },
+                { title: "Creative Director", course: "arts", month: "march", year: "2025" },
+                { title: "AI Specialist", course: "engineering", month: "january", year: "2024" },
+                { title: "Marketing Expert", course: "business", month: "february", year: "2025" },
+                { title: "Sculptor Extraordinaire", course: "arts", month: "march", year: "2024" },
+                { title: "Software Developer", course: "engineering", month: "january", year: "2025" }
+            ];
+
+            stories.forEach(story => {
+                const card = document.createElement("div");
+                card.classList.add("col-lg-3", "col-md-4", "col-sm-6", "mb-4", "story-card");
+                card.setAttribute("data-course", story.course);
+                card.setAttribute("data-month", story.month);
+                card.setAttribute("data-year", story.year);
+                card.innerHTML = `
+                    <div class="card border-danger mb-1" style="max-width: 18rem;">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Alumni Image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${story.title}</h5>
+                            <p class="card-text">A success story from our alumni.</p>
+                            <button class="btn btn-outline-danger">Read More</button>
+                        </div>
+                    </div>
+                `;
+                storiesContainer.appendChild(card);
+            });
+
+            const courseFilter = document.getElementById("courseFilter");
+            const monthFilter = document.getElementById("monthFilter");
+            const yearFilter = document.getElementById("yearFilter");
+            
+            function filterStories() {
+                const selectedCourse = courseFilter.value;
+                const selectedMonth = monthFilter.value;
+                const selectedYear = yearFilter.value.trim();
+                const storyCards = document.querySelectorAll(".story-card");
+
+                storyCards.forEach(card => {
+                    const course = card.getAttribute("data-course");
+                    const month = card.getAttribute("data-month");
+                    const year = card.getAttribute("data-year");
+
+                    const matchesCourse = selectedCourse === "all" || course === selectedCourse;
+                    const matchesMonth = selectedMonth === "all" || month === selectedMonth;
+                    const matchesYear = selectedYear === "all" || year === selectedYear;
+
+                    if (matchesCourse && matchesMonth && matchesYear) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            courseFilter.addEventListener("change", filterStories);
+            monthFilter.addEventListener("change", filterStories);
+            yearFilter.addEventListener("input", filterStories);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
