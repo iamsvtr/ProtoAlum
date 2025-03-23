@@ -17,6 +17,10 @@
             background-size: cover;
             text-align: center;
             font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         /* Layout container for the kiosk UI */
@@ -25,8 +29,10 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            height: 100vh;
+            height: 90vh; /* Adjusted height to leave space for footer */
         }
+
+
         
         /* Styling for the menu box */
         .menu-box {
@@ -141,14 +147,15 @@
                     </button>
                 </div>
             </div>
-            
-            <!-- Footer link -->
-            <div class="footer">GO TO THE <a href="alumni-portal.html">ALUMNI PORTAL</a></div>
+
+                    <!-- Footer link outside the menu-box -->
+                    <div class="footer mt-3 ">GO TO THE <a href="alumni-portal.html">ALUMNI PORTAL</a></div>
+
         </div>
-        
+
         <!-- University logo container -->
         <div class="logo-container">
-            <img src="PUPLogo.png" alt="University Logo">
+            <img src="PUPLogo.png" alt="University Logo">   
         </div>
     </div>
 </body>
