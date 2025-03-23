@@ -37,6 +37,24 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 800px;
         }
+        .assistive-touch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #7d0d0d;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1050; /* Ensure it's above other elements */
+        }
+        .dropdown-menu { min-width: 120px; }
     </style>
 </head>
 <body>
@@ -84,6 +102,21 @@
             <!-- Dynamic stories will be added here -->
         </div>
     </div>
+    <div class="dropdown">
+        <div class="assistive-touch user-select-none" id="assistiveTouch" data-bs-toggle="dropdown" aria-expanded="false">
+            &#9881;
+        </div>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="index.html">Home</a></li>
+            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+            <li><a class="dropdown-item" href="events.html">Events</a></li>          
+            <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+            <li><a class="dropdown-item" href="services.html">Services</a></li>
+            <li><a class="dropdown-item" href="stories.html">Stories</a></li>
+            <li><a class="dropdown-item" href="donate.html">Donate</a></li>
+            
+        </ul>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -109,7 +142,7 @@
                 card.setAttribute("data-year", story.year);
                 card.innerHTML = `
                     <div class="card border-danger mb-1" style="max-width: 18rem;">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Alumni Image">
+                        <img src="person.png" class="card-img-top" alt="Alumni Image">
                         <div class="card-body text-center">
                             <h5 class="card-title">${story.title}</h5>
                             <p class="card-text">A success story from our alumni.</p>

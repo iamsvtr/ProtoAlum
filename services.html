@@ -71,10 +71,49 @@
             height: auto;
             margin-right: 15px;
         }
+
+        .assistive-touch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #7d0d0d;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1050; /* Ensure it's above other elements */
+        }
+        .dropdown-menu { min-width: 120px; }
+
+
     </style>
 </head>
 <body>
     <div class="header">SERVICES</div>
+
+    <div class="dropdown">
+        <div class="assistive-touch user-select-none" id="assistiveTouch" data-bs-toggle="dropdown" aria-expanded="false">
+            &#9881;
+        </div>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="index.html">Home</a></li>
+            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+            <li><a class="dropdown-item" href="events.html">Events</a></li>          
+            <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+            <li><a class="dropdown-item" href="services.html">Services</a></li>
+            <li><a class="dropdown-item" href="stories.html">Stories</a></li>
+            <li><a class="dropdown-item" href="donate.html">Donate</a></li>
+            
+        </ul>
+    </div>
+
+
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-6 mb-4">
@@ -99,6 +138,10 @@
                 <div class="card"></div>
             </div>
         </div>
+
+
+
+
         <div class="footer-line"></div>
         <div class="footer">
             To get full access to our online services, please register and login to alumni portal.
@@ -106,5 +149,9 @@
             <a href="#" class="btn-alumni">ALUMNI PORTAL</a>
         </div>
     </div>
+
+    
+
+
 </body>
 </html>
