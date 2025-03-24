@@ -29,11 +29,12 @@
             margin: 8px auto 0;
         }
         .card {
-            border: 1px solid #ddd;
-            padding: 40px;
+            border: 1px solid red; /* Set border color to red */
+            padding: 0; /* Remove padding to fit image */
             text-align: center;
             position: relative;
             min-height: 200px;
+            overflow: hidden; /* Ensure no overflow */
         }
         .footer {
             text-align: center;
@@ -69,9 +70,18 @@
             text-align: left;
         }
         .card-content img {
-            width: 80px;
-            height: auto;
-            margin-right: 15px;
+            width: 100px; /* Adjust width to match the card image */
+            height: 100px; /* Adjust height to match the card image */
+            object-fit: contain; /* Ensure it scales properly */
+            margin-right: 15px;         
+            
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 10px;
         }
 
         .assistive-touch {
@@ -119,15 +129,19 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-6 mb-4">
-                <div class="card"></div>
+                <div class="card">
+                    <img src="AlumniID.png" alt="Alumni ID">
+                </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card"></div>
+                <div class="card">
+                    <img src="YearBook.png" alt="Year Book">
+                </div>
             </div>
             <div class="col-md-6 mb-4">
                 <div class="card">
                     <div class="card-content">
-                        <img src="your-image.jpg" alt="Request Documents">
+                        <img src="RequestDocs.png" alt="Request Documents">
                         <div>
                             <h5 class="card-title">REQUEST DOCUMENTS</h5>
                             <p class="card-text">Request documents online like Transcript of Records, Diploma etc. through PUP ODRS.</p>
@@ -137,7 +151,9 @@
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="card"></div>
+                <div class="card">
+                    <img src="CreateResume.png" alt="Create Resume">
+                </div>
             </div>
         </div>
 
