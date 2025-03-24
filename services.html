@@ -33,8 +33,13 @@
             padding: 0; /* Remove padding to fit image */
             text-align: center;
             position: relative;
-            min-height: 200px;
+
             overflow: hidden; /* Ensure no overflow */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Stronger shadow */
+            min-height: 200px;  /* Ensures uniform height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .footer {
             text-align: center;
@@ -58,22 +63,34 @@
         .card-title {
             font-weight: bold;
             color: #8B0000;
+            font-size: 16px;
+            padding-left: 20px;
         }
+
+        .card-text{
+            font-size: 14px;
+            padding-left: 20px;
+                    
+        }
+
         .card-text a {
             color: blue;
             text-decoration: none;
             font-weight: bold;
         }
+
+        .card-text a:hover {
+            text-decoration: underline;
+        }
+
         .card-content {
             display: flex;
             align-items: center;
             text-align: left;
+            padding-left: 90px;
         }
         .card-content img {
-            width: 100px; /* Adjust width to match the card image */
-            height: 100px; /* Adjust height to match the card image */
-            object-fit: contain; /* Ensure it scales properly */
-            margin-right: 15px;         
+            max-width: 180px;  /* Ensures consistency */
             
         }
 
@@ -83,6 +100,48 @@
             object-fit: contain;
             padding: 10px;
         }
+
+    /* ========== RESPONSIVENESS ========== */
+
+    /* Tablets & Medium Screens (768px - 991px) */
+    @media (max-width: 991px) {
+        .card-title {
+            font-size: 18px;
+        }
+        .card-text {
+            font-size: 16px;
+        }
+    }
+
+        /* Mobile Screens (576px - 767px) */
+    @media (max-width: 767px) {
+        .card-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .card-content img {
+            width: 80px; /* Reduce image size */
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .btn-alumni {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+    }
+
+        /* Extra Small Screens (up to 575px) */
+    @media (max-width: 575px) {
+        .col-md-6 {
+            width: 100%;
+        }
+        .card {
+            text-align: center;
+        }
+        .card-title {
+            font-size: 16px;
+        }
+    }
 
         .assistive-touch {
             position: fixed;
@@ -96,49 +155,77 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
             cursor: pointer;
             font-size: 24px;
-            z-index: 1050; /* Ensure it's above other elements */
+            z-index: 1050; /* Ensures it's above other elements */
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
         }
-        .dropdown-menu { min-width: 120px; }
 
+        /* Hover effect for better UX */
+        .assistive-touch:hover {
+            background-color: #a00d0d;
+            transform: scale(1.1);
+        }
+
+        /* Adjust size on smaller screens */
+        @media (max-width: 768px) {
+            .assistive-touch {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* Further adjustments for very small screens */
+        @media (max-width: 480px) {
+            .assistive-touch {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
 
     </style>
 </head>
 <body>
     <div class="header">SERVICES</div>
 
-    <div class="dropdown">
-        <div class="assistive-touch user-select-none" id="assistiveTouch" data-bs-toggle="dropdown" aria-expanded="false">
-            &#9881;
+        <!-- Assistive Touch Button -->
+        <div class="dropdown">
+            <div class="assistive-touch user-select-none" id="assistiveTouch" data-bs-toggle="dropdown" aria-expanded="false">
+                &#9881;
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                <li><a class="dropdown-item" href="events.html">Events</a></li>          
+                <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+                <li><a class="dropdown-item" href="services.html">Services</a></li>
+                <li><a class="dropdown-item" href="stories.html">Stories</a></li>
+                <li><a class="dropdown-item" href="donate.html">Donate</a></li>
+                
+            </ul>
         </div>
-        <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="index.html">Home</a></li>
-            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
-            <li><a class="dropdown-item" href="events.html">Events</a></li>          
-            <li><a class="dropdown-item" href="articles.html">Articles</a></li>
-            <li><a class="dropdown-item" href="services.html">Services</a></li>
-            <li><a class="dropdown-item" href="stories.html">Stories</a></li>
-            <li><a class="dropdown-item" href="donate.html">Donate</a></li>
-            
-        </ul>
-    </div>
 
 
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4">
                 <div class="card">
                     <img src="AlumniID.png" alt="Alumni ID">
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4">
                 <div class="card">
                     <img src="YearBook.png" alt="Year Book">
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4">
                 <div class="card">
                     <div class="card-content">
                         <img src="RequestDocs.png" alt="Request Documents">
@@ -150,15 +237,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4">
                 <div class="card">
                     <img src="CreateResume.png" alt="Create Resume">
                 </div>
             </div>
         </div>
-
-
-
 
         <div class="footer-line"></div>
         <div class="footer">
