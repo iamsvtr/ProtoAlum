@@ -28,7 +28,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-        }
+        }  
         .filter-section {
             margin: 20px auto;
             padding: 20px;
@@ -36,7 +36,38 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 800px;
+            margin-right: 40%;
         }
+
+        .card-custom {
+            border: 1px solid #dc3545;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+        }
+        .card-custom .card-img-container {
+            padding: 1rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .card-custom .custom-indicator {
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 4rem;
+            height: 0.25rem;
+            background-color: #dc3545;
+        }
+        .btn-custom {
+            color: #dc3545;
+            border: 1px solid #dc3545;
+            border-radius: 1.5rem;
+        }
+        .btn-custom:hover {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+
         .assistive-touch {
             position: fixed;
             bottom: 20px;
@@ -143,12 +174,15 @@
                 card.setAttribute("data-month", story.month);
                 card.setAttribute("data-year", story.year);
                 card.innerHTML = `
-                    <div class="card border-danger mb-1" style="max-width: 18rem;">
-                        <img src="person.png" class="card-img-top" alt="Alumni Image">
+                    <div class="card card-custom">
+                        <div class="position-relative card-img-container">
+                            <div class="custom-indicator"></div>
+                            <img src="person.png" class="card-img-top" alt="Alumni Image">
+                        </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title">${story.title}</h5>
-                            <p class="card-text">A success story from our alumni.</p>
-                            <button class="btn btn-outline-danger">Read More</button>
+                            <h5 class="card-title font-weight-bold">${story.title}</h5>
+                            <p class="card-text text-muted">A success story from our alumni.</p>
+                            <a href="#" class="btn btn-custom">Read More</a>
                         </div>
                     </div>
                 `;
