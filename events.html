@@ -1,0 +1,375 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <style>
+        body {
+           
+        }
+        .header {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header .underline {
+            content: "";
+            width: 50px;
+            height: 4px;
+            background-color: gold;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .featured-section {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .featured-section h2 {
+            color: #8B0000;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .featured-section h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .featured-section p {
+            color: #555;
+        }
+        .featured-section button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .article-card {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .article-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .article-card p {
+            color: #555;
+        }
+        .article-card button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .assistive-touch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #7d0d0d;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1050; /* Ensures it's above other elements */
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        /* Hover effect for better UX */
+        .assistive-touch:hover {
+            background-color: #a00d0d;
+            transform: scale(1.1);
+        }
+
+
+        @media (max-width: 768px) {
+    .featured-section h3 {
+        font-size: 2rem;
+    }
+
+    .article-card {
+        padding: 15px;
+    }
+
+    .assistive-touch {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-section {
+        text-align: center;
+    }
+
+    .featured-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .featured-section button {
+        width: 100%;
+    }
+
+    .article-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .assistive-touch {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">ARTICLES
+        <div class="underline"></div>
+    </div>
+
+    <main class="container my-5">
+        <section class="featured-section row">
+            <div class="col-md-8">
+                <h2>FEATURED</h2>
+                <h3>TITLE SPACE</h3>
+                <p>This is a paragraph content section where other things will enter here. This is a paragraph content section where other things will enter here. This is a paragraph content section where other things will enter here. This is a paragraph content section where other things will enter here. This is a paragraph content section where other things will enter here. This is a paragraph content section where other things will enter here.</p>
+                <button>Read Now</button>
+            </div>
+            <div class="col-md-4">
+                <img src="https://placehold.co/400x300" alt="Featured article image" class="img-fluid rounded">
+            </div>
+        </section>
+        <section class="mb-5">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                    <label for="filter" class="form-label">Filter News</label>
+                    <select id="filter" class="form-select">
+                        <option>All Articles</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="month" class="form-label">Month</label>
+                    <select id="month" class="form-select">
+                        <option>All</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="year" class="form-label">Year</label>
+                    <select id="year" class="form-select">
+                        <option>All</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="February" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="March" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="February" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="April" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="January" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="January data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="March" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="April" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="February" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="March" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="April" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="article-card" data-category="news" data-month="January" data-year="2024">
+                    <img src="https://placehold.co/300x200" alt="Article image" class="img-fluid rounded mb-3">
+                    <h3>TITLE SPACE</h3>
+                    <p>This is a paragraph content section where other things will enter here.</p>
+                    <button class="w-100">Read Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- Assistive Touch Button -->
+        <div class="dropdown">
+            <div class="assistive-touch user-select-none" id="assistiveTouch" data-bs-toggle="dropdown" aria-expanded="false">
+                &#9881;
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                <li><a class="dropdown-item" href="events.html">Events</a></li>          
+                <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+                <li><a class="dropdown-item" href="services.html">Services</a></li>
+                <li><a class="dropdown-item" href="stories.html">Stories</a></li>
+                <li><a class="dropdown-item" href="donate.html">Donate</a></li>
+                
+            </ul>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const filterDropdown = document.getElementById("filter");
+                const monthDropdown = document.getElementById("month");
+                const yearDropdown = document.getElementById("year");
+                const articles = document.querySelectorAll(".article-card");
+            
+                function filterArticles() {
+                    const selectedCategory = filterDropdown.value.toLowerCase();
+                    const selectedMonth = monthDropdown.value.toLowerCase();
+                    const selectedYear = yearDropdown.value.toLowerCase();
+            
+                    articles.forEach(article => {
+                        const articleCategory = article.dataset.category ? article.dataset.category.toLowerCase() : "";
+                        const articleMonth = article.dataset.month ? article.dataset.month.toLowerCase() : "";
+                        const articleYear = article.dataset.year ? article.dataset.year.toLowerCase() : "";
+            
+                        // Check if article matches selected filters
+                        const categoryMatch = selectedCategory === "all articles" || articleCategory === selectedCategory;
+                        const monthMatch = selectedMonth === "all" || articleMonth === selectedMonth;
+                        const yearMatch = selectedYear === "all" || articleYear === selectedYear;
+            
+                        // Show or hide article based on matches
+                        article.style.display = categoryMatch && monthMatch && yearMatch ? "block" : "none";
+                    });
+                }
+            
+                // Add event listeners to dropdowns
+                filterDropdown.addEventListener("change", filterArticles);
+                monthDropdown.addEventListener("change", filterArticles);
+                yearDropdown.addEventListener("change", filterArticles);
+            });
+        </script>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const monthDropdown = document.getElementById("month");
+                const yearDropdown = document.getElementById("year");
+            
+                // Populate months dynamically
+                const months = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                months.forEach(month => {
+                    let option = document.createElement("option");
+                    option.textContent = month;
+                    option.value = month.toLowerCase();
+                    monthDropdown.appendChild(option);
+                });
+            
+                // Populate years dynamically (e.g., from 2020 to the current year)
+                const currentYear = new Date().getFullYear();
+                for (let year = currentYear; year >= 2020; year--) {
+                    let option = document.createElement("option");
+                    option.textContent = year;
+                    option.value = year;
+                    yearDropdown.appendChild(option);
+                }
+            });
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
