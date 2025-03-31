@@ -10,13 +10,12 @@
             background-color: #f8f9fa;
         }
         .header {
-            background-color: #a10000;
+            background-color: #8B0000;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 15px;
             font-size: 24px;
             font-weight: bold;
-            text-transform: uppercase;
             position: relative;
         }
         .header::after {
@@ -50,6 +49,9 @@
             border-top-right-radius: 0.5rem;
         }
 
+        .card-body{
+            text-align: left;
+        }
 
         .custom-indicator {
             position: absolute;
@@ -82,18 +84,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
             cursor: pointer;
             font-size: 24px;
-            z-index: 1050; /* Ensure it's above other elements */
+            z-index: 1050; /* Ensures it's above other elements */
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
         }
+
+        /* Hover effect for better UX */
+        .assistive-touch:hover {
+            background-color: #a00d0d;
+            transform: scale(1.1);
+        }
+
         .dropdown-menu { min-width: 120px; }
     </style>
 </head>
 <body>
     <!-- Header -->
     <div class="header">
-        Alumni Stories
+        ALUMNI STORIES
     </div>
 
     <!-- Filter Section -->
@@ -185,9 +195,11 @@
                             <img src="person.png" class="card-img-top" alt="Alumni Image">
                         </div>
                         <div class="card-body text-center">
+                            <div class="card-body text-start">
                             <h5 class="card-title font-weight-bold">${story.title}</h5>
                             <p class="card-text text-muted">A success story from our alumni.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
+                             </div>
+                            <a href="#" class="btn btn-custom">Read More</a>                          
                         </div>
                     </div>
                 `;
