@@ -13,17 +13,20 @@
             background-color: #8B0000;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             font-size: 24px;
             font-weight: bold;
+            position: relative;
         }
         .donate-header::after {
             content: "";
-            display: block; 
-            width: 80px;
+            width: 50px;
             height: 4px;
-            background-color: #FFC107;
-            margin: 8px auto 0;
+            background-color: gold;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .card {
             border: 1px solid #8b1c1c;
@@ -119,6 +122,8 @@
             transform: scale(1.1);
         }
 
+        .dropdown-menu { min-width: 120px; }
+
         /* Adjust size on smaller screens */
         @media (max-width: 768px) {
             .assistive-touch {
@@ -197,6 +202,8 @@
                 <img src="QRCode.png" alt="QR Code" class="qrcode">
             </div>
         </div>
+
+        <!-- Assistive Touch Button -->
         <div class="dropdown">
             <div class="assistive-touch user-select-none" id="assistiveTouch" data-bs-toggle="dropdown" aria-expanded="false">
                 &#9881;
