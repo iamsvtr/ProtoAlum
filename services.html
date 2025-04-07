@@ -103,6 +103,43 @@
             padding: 10px;
         }
 
+
+/* General improvement */
+.request-docs-card .card-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Make image responsive but keep position */
+.request-docs-card .doc-image {
+    max-width: 30%;       /* Responsive width */
+    height: auto;
+    margin-right: 1px;   /* Controls spacing between image and text */
+    margin-left: 70px;    /* Nudges image slightly right */
+}
+
+/* On small screens, stack image above text */
+@media (max-width: 767px) {
+    .request-docs-card .card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .request-docs-card .doc-image {
+        width: 100px;
+        margin: 0 0 15px 0;
+    }
+
+    .card-title, .card-text {
+        padding-left: 0 !important;
+    }
+}
+
     /* ========== RESPONSIVENESS ========== */
 
     /* Tablets & Medium Screens (768px - 991px) */
@@ -230,9 +267,9 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-content">
-                        <img src="RequestDocs.png" alt="Request Documents">
+                <div class="card request-docs-card">
+                    <div class="card-content flex-wrap flex-md-nowrap">
+                        <img src="RequestDocs.png" alt="Request Documents" class="doc-image">
                         <div>
                             <h5 class="card-title">REQUEST DOCUMENTS</h5>
                             <p class="card-text">Request documents online like Transcript of Records, Diploma etc. through PUP ODRS.</p>
