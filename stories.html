@@ -53,6 +53,8 @@
             text-align: left;
         }
 
+        
+
         .custom-indicator {
             position: absolute;
             top: 0;
@@ -184,12 +186,12 @@
 
             stories.forEach(story => {
                 const card = document.createElement("div");
-                card.classList.add("col-lg-3", "col-md-4", "col-sm-6", "mb-4", "story-card");
+                card.classList.add("col-lg-3", "col-md-4", "col-sm-6", "mb-4", "story-card", "d-flex");
                 card.setAttribute("data-course", story.course);
                 card.setAttribute("data-month", story.month);
                 card.setAttribute("data-year", story.year);
                 card.innerHTML = `
-                    <div class="card card-custom">
+                    <div class="card card-custom h-100 w-100">
                         <div class="position-relative card-img-container">
                             <div class="custom-indicator"></div>
                             <img src="person.png" class="card-img-top" alt="Alumni Image">
