@@ -3,377 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers Page</title>
+    <title>ARCDO | About</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-.about {
-    min-height: 100vh;
-    padding: 2rem 0;
-}
 
-.underline {
-    width: 150px;
-    height: 2px;
-    background: #FCBF15;
-    margin: 5px auto 0;
-}
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+        .header::after {
+            content: "";
+            width: 50px;
+            height: 4px;
+            background-color: gold;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        h2 {
+            color: #800000;
+            font-weight: 700;
+        }
+        .section {
+            padding: 3rem 0;
+        }
+        .section-dark {
+            background-color: #2D2926;
+            color: #fff;
+        }
+        .text-maroon {
+            color: #800000;
+        }
+        .img-profile {
+            height: 280px;
+            width: 280px;
+            border-radius: 25%;
+            object-fit: cover;
+            border: #2D2926 3px solid;
+        }
+        .img-round {
+            border-radius: 50%;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+        }
 
-.about .title h2{
-    font-weight: 700;
-    color: #800000;
-}
+        .org img {
+            height: 300px;
+            width: 300px;;
+            border-radius: 25%;
+            object-position: top;
+            border: #2D2926 3px solid;
+            padding: 0;
+        }
 
-.about p{
-    margin: 0;
-}
+        .org {
+            margin: 5rem 0;
+        }
 
-.arcdo-img {
-    border-radius: 100% !important;
-}
+        .org-heading h2 {
+            font-weight: 700;
+            color: #800000;
+        }
 
-.about .main-content {
-    background-color: #800000;
-    color: #fff;
-    padding: 4rem 0;
-    text-align: justify;
-}
-
-.about .mission {
-    display: flex;
-    text-align: justify;
-    height: 300px;
-    align-items: center;
-}
-
-.about .mission h2 {
-    font-weight: 700;
-    color: #800000;
-}
-
-.about .vision {
-    display: flex;
-    background: #2D2926;
-    height: 300px;
-    text-align: justify;
-    color: #fff;
-    align-items: center;
-}
-
-.about .vision h2{
-    font-weight: 700;
-}
-
-.about .functions {
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-}
-
-.about .functions h2{
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #800000;
-}
-
-.about .functions li{
-    padding: 0.5rem 0;
-}
-
-.about .values {
-    display: flex;
-    background: #2D2926;
-    height: 200px;
-    text-align: justify;
-    color: #fff;
-    align-items: center;
-}
-
-.about .values h2{
-    font-weight: 700;
-}
-
-.org img {
-    height: 300px;
-    width: 300px;;
-    border-radius: 25%;
-    object-position: top;
-    border: #2D2926 3px solid;
-    padding: 0;
-}
-
-.org {
-    margin: 5rem 0;
-}
-
-.org-heading h2 {
-    font-weight: 700;
-    color: #800000;
-}
-
-
-
-@media screen and (min-width: 1024px) {
-    .about .functions ul{
-        padding-left: 100px;
-    }
-}
-
-
-
-@media screen and (min-width: 768px) {
-    .about .main-content p {
-        text-indent: 50px;
-    }
-
-    .about .mission {
-        height: 185px;
-    }
-
-    .about .vision {
-        height: 185px;
-    }
-
-    .about .values {
-        max-height: 180px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .about .mission .row > .d-flex {
-        justify-content: center;
-        margin: 5px 0 10px 0;
-    }
-
-    .about .vision .row > .d-flex {
-        justify-content: center;
-        margin: 5px 0 10px 0;
-    }
-
-    .about .functions .row > .d-flex {
-        justify-content: center;
-        margin: 5px 0 10px 0;
-    }
-
-    .about .values .row > .d-flex {
-        justify-content: center;
-        margin: 5px 0 10px 0;
-    }
-    
-}
 
     </style>
 </head>
-<body>    
-    <div class="title my-5 text-center">
+<body>
+    <div class="header">ALUMNI RELATIONS AND CAREER DEVELOPMENT OFFICE
+        <div class="underline"></div>
+    </div>
+    <section class="section bg-maroon text-white text-justify">
         <div class="container">
-            <h2>ALUMNI RELATIONS AND CAREER DEVELOPMENT OFFICE</h2>
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-3">
+                    <img src="arcdologo.jpg" alt="ARCDO Logo" class="img-fluid img-round">
+                </div>
+                <div class="col-md-9">
+                    <p>We are the driving force behind the PUP Career Development and Placement Office, dedicated to connecting students and graduates with meaningful employment opportunities...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">OUR MISSION</h2>
             <div class="underline"></div>
-        </div> 
-    </div>
-    
-    <div class="main-content">
+            <p class="text-center w-75 mx-auto">The PUP Career Development and Placement Office envisions itself as a borderless work pool providing students and graduates employment...</p>
+        </div>
+    </section>
+
+    <section class="section section-dark">
         <div class="container">
-            <div class="row gap-5">
-    
-                <div class="col-md-2 d-flex align-items-center justify-content-center">
-                    <img src="arcdologo.jpg" alt="ARCDO Logo" class="arcdo-img img-thumbnail">
-                </div>
-    
-                <div class="col-md-8 d-flex align-items-center">
-                    <p>We are the driving force behind the PUP Career Development and Placement Office, dedicated to connecting students and graduates with meaningful employment opportunities. Our mission is to cultivate globally competitive professionals who embody excellence, integrity, and a commitment to making a positive impact in their fields and communities.</p>
-                </div>
-            </div>
-        </div> 
-    </div>
-    
-    <div class="mission">
+            <h2 class="text-center">OUR VISION</h2>
+            <div class="underline"></div>
+            <p class="text-center w-75 mx-auto">The PUP Career Development and Placement Office envisions a future where all graduates and working students are globally competitive professionals...</p>
+        </div>
+    </section>
+
+    <section class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-flex align-items-center">
-                    <h2>OUR MISSION</h2>
-                </div>
-    
-                <div class="col-md-8 d-flex align-items-center">
-                    <p>The PUP Career Development and Placement Office envisions itself as a borderless work pool providing students and graduates employment in reputable companies, institutions, and other entities. It is also a training ground that will develop globally competitive graduates who are ready to face the challenges of the new millennium.</p>
-                </div>
-            </div>
-        </div> 
-    </div>
-    
-    <div class="vision">
+            <h2 class="text-center">OUR FUNCTIONS</h2>
+            <div class="underline"></div>
+            <ul>
+                <li>To formulate a Manual of Operations for the Office and eventually implement its guidelines, rules, and regulations</li>
+                <li>To coordinate with various companies for possible positions for PUP graduates and alumni</li>
+                <li>To disseminate the recruitment needs of companies by posting ads within the university premises</li>
+                <li>To facilitate the processing of the companies staffing requirements by providing them the list of graduates</li>
+                <li>To establish linkages with more multinational companies, government agencies, non-government organizations, and international agencies for possible job offers</li>
+                <li>To prepare referral letters for the graduates and alumni of the University</li>
+                <li>To conduct pre-employment seminars and career orientation activities for the graduating students</li>
+                <li>To coordinate with the Communications Management Office for updates in the Career Development and Placement Services Website</li>
+                <li>To coordinate with agencies, companies, institutions, and organizations for possible sponsorship of University activities</li>
+                <li>To prepare and send communications pertinent to the functions of the Office to all concerned colleges, offices, and companies</li>
+                <li>To reply to queries of walk-ins and telephone calls</li>
+                <li>To conduct job fairs for the graduates and alumni of the University</li>
+                <li>To coordinate with the Admission Services and Guidance, Counseling and Testing Services in the conduct of the Freshmen Orientation at the beginning of each academic year</li>
+                <li>To invite companies to subscribe to the Career Development and Placement Services website</li>
+                <li>To coordinate with the different colleges regarding recruitment and placement requirements</li>
+                <li>To monitor the career plans of graduates and alumni and assist them in their employment needs</li>
+                <li>To attend meetings, seminars, workshops, conventions for updates on recent recruitment, staffing and employment principles, techniques and issues and concerns related to such matters</li>
+                <li>To perform other functions as necessary in achieving the noble goals of the University</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-dark">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-flex align-items-center">
-                    <h2>OUR VISION</h2>
-                </div>
-    
-                <div class="col-md-8 d-flex align-items-center">
-                    <p>The PUP Career Development and Placement Office envisions a future where all graduates and working students are globally competitive professionals who embody excellence, integrity, and a commitment to making a positive impact in their fields and communities.</p>
-                </div>
-            </div>
-        </div> 
-    </div>
-    
-    <div class="functions">
+            <h2 class="text-center">CORE VALUES</h2>
+            <div class="underline"></div>
+            <p class="text-center w-75 mx-auto">The Alumni Relations and Career Development Offices staff and personnel pledge and serve the clientele with utmost responsibility and integrity...</p>
+        </div>
+    </section>
+
+
+    <div class="org-heading text-center mb-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                    <h2>OUR FUNCTIONS</h2>
-                </div>
-    
-                <div class="col-md-12 d-flex align-items-center">
-                    <ul>
-                        <li>To formulate a Manual of Operations for the Office and eventually implement its guidelines, rules, and regulations</li>
-                        <li>To coordinate with various companies for possible positions for PUP graduates and alumni</li>
-                        <li>To disseminate the recruitment needs of companies by posting ads within the university premises</li>
-                        <li>To facilitate the processing of the companies staffing requirements by providing them the list of graduates</li>
-                        <li>To establish linkages with more multinational companies, government agencies, non-government organizations, and international agencies for possible job offers</li>
-                        <li>To prepare referral letters for the graduates and alumni of the University</li>
-                        <li>To conduct pre-employment seminars and career orientation activities for the graduating students</li>
-                        <li>To coordinate with the Communications Management Office for updates in the Career Development and Placement Services Website</li>
-                        <li>To coordinate with agencies, companies, institutions, and organizations for possible sponsorship of University activities</li>
-                        <li>To prepare and send communications pertinent to the functions of the Office to all concerned colleges, offices, and companies</li>
-                        <li>To reply to queries of walk-ins and telephone calls</li>
-                        <li>To conduct job fairs for the graduates and alumni of the University</li>
-                        <li>To coordinate with the Admission Services and Guidance, Counseling and Testing Services in the conduct of the Freshmen Orientation at the beginning of each academic year</li>
-                        <li>To invite companies to subscribe to the Career Development and Placement Services website</li>
-                        <li>To coordinate with the different colleges regarding recruitment and placement requirements</li>
-                        <li>To monitor the career plans of graduates and alumni and assist them in their employment needs</li>
-                        <li>To attend meetings, seminars, workshops, conventions for updates on recent recruitment, staffing and employment principles, techniques and issues and concerns related to such matters</li>
-                        <li>To perform other functions as necessary in achieving the noble goals of the University</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="text-center">ARCDO OFFICIALS AND STAFF</h2>
+            <div class="underline"></div><br>
+            <p class="text-center">Get to know the people behind the Alumni Relations and Career Development Office - PUP</p>
         </div> 
     </div>
     
-    <div class="values">
+    <div class="org container">
+        <div class="row mb-4">
+            <div class="col-md-12 d-flex flex-column align-items-center">
+                <img src="officials/MaamFlor2.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Engr. FLORINDA H. OQUINDO</h6>
+                <p class="text-center">Director</p>
+            </div>
+        </div>
+    
+        <div class="row mb-4">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <img src="officials/Prof_JanePulma.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Prof. Jane S. Pulma</h6>
+                <p class="text-center">Chief, Career Development & Placement Services</p>
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <img src="officials/JoepeSolosa.png" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Prof. Ma. Joepe A. Solosa</h6>
+                <p class="text-center">Chief, Alumni Relations Services</p>
+            </div>
+        </div>    
+    
+        <div class="row">
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/MylaSalcedo.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Myla D. Salcedo</h6>
+                <p class="text-center">Admin Staff</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/GlacieDungao.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Glacie Joy L. Dungao</h6>
+                <p class="text-center">Admin Staff</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/MauraPaz.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Maura C. Paz</h6>
+                <p class="text-center">Admin Staff</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/KennetteRemolano.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Kennette A. Remolano</h6>
+                <p class="text-center">Admin Staff</p>
+            </div>
+        </div>
+    </div>
+    <!--THE EXECUTIVE OFFICIALS-->
+    
+    <div class="org-heading text-center mb-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-flex align-items-center">
-                    <h2>CORE VALUES</h2>
-                </div>
-    
-                <div class="col-md-8 d-flex align-items-center">
-                    <p>The Alumni Relations and Career Development Offices staff and personnel pledge and serve the clientele with utmost responsibility and integrity, passion and loyalty, efficiency and teamwork</p>
-                </div>
-            </div>
+            <h2 class="text-center">THE EXECUTIVE OFFICIALS</h2>
+            <div class="underline"></div><br>
         </div> 
     </div>
     
-<!--ARCDO OFFICIALS STAFF-->
-<div class="org-heading text-center mb-5">
-    <div class="container">
-        <h2 class="text-center">ARCDO OFFICIALS AND STAFF</h2>
-        <div class="underline"></div><br>
-        <p class="text-center">Get to know the people behind the Alumni Relations and Career Development Office - PUP</p>
-    </div> 
-</div>
-
-<div class="org container">
-    <div class="row mb-4">
-        <div class="col-md-12 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/MaamFlor2.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Engr. FLORINDA H. OQUINDO</h6>
-            <p class="text-center">Director</p>
+    <div class="org container">
+        <div class="row mb-4">
+            <div class="col-md-12 d-flex flex-column align-items-center">
+                <img src="officials/ManuelMuhi.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Manuel M. Muhi, D.Tech., ASEAN Engr.</h6>
+                <p class="text-center">President</p>
+            </div>
+        </div>
+    
+        <div class="row mb-4">
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <img src="officials/AlbertoGuillo.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Alberto C. Guillo, MS(Stat) MA(Econ)</h6>
+                <p class="text-center">Executive Vice President</p>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <img src="officials/EmmanuelDeGuzman.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Emanuel C. De Guzman, Ph.D</h6>
+                <p class="text-center">Vice President for Academic Affairs</p>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <img src="officials/TomasTestor.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-3 text-center">Tomas O. Testor, MPA</h6>
+                <p class="text-center">Vice President for Student Affairs & Services</p>
+            </div>
+        </div>    
+    
+        <div class="row">
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/AnnaGapasin.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Anna Ruby P. Gapasin, DEM</h6>
+                <p class="text-center">Vice President for Research, Extension, & Dev't</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/PascualitoGatan.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Pascualito B. Gatan, MBA</h6>
+                <p class="text-center">Vice President for Branches & Campuses</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/AdamRamilo.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Adam V. Ramilo, MIR</h6>
+                <p class="text-center">Vice President for Administration</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center">
+                <img src="officials/MarisaLegaspi.jpg" alt="Organizational Chart" class="img-thumbnail">
+                <h6 class="mt-2 text-center">Marisa J. Legaspi, CPA</h6>
+                <p class="text-center">Vice President for Finance</p>
+            </div>
         </div>
     </div>
-
-    <div class="row mb-4">
-        <div class="col-md-6 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/Prof_JanePulma.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Prof. Jane S. Pulma</h6>
-            <p class="text-center">Chief, Career Development & Placement Services</p>
-        </div>
-        <div class="col-md-6 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/JoepeSolosa.png' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Prof. Ma. Joepe A. Solosa</h6>
-            <p class="text-center">Chief, Alumni Relations Services</p>
-        </div>
-    </div>    
-
-    <div class="row">
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/MylaSalcedo.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Myla D. Salcedo</h6>
-            <p class="text-center">Admin Staff</p>
-        </div>
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/GlacieDungao.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Glacie Joy L. Dungao</h6>
-            <p class="text-center">Admin Staff</p>
-        </div>
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/MauraPaz.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Maura C. Paz</h6>
-            <p class="text-center">Admin Staff</p>
-        </div>
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/KennetteRemolano.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Kennette A. Remolano</h6>
-            <p class="text-center">Admin Staff</p>
-        </div>
-    </div>
-</div>
-<!--THE EXECUTIVE OFFICIALS-->
-
-<div class="org-heading text-center mb-5">
-    <div class="container">
-        <h2 class="text-center">THE EXECUTIVE OFFICIALS</h2>
-        <div class="underline"></div><br>
-    </div> 
-</div>
-
-<div class="org container">
-    <div class="row mb-4">
-        <div class="col-md-12 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/ManuelMuhi.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Manuel M. Muhi, D.Tech., ASEAN Engr.</h6>
-            <p class="text-center">President</p>
-        </div>
-    </div>
-
-    <div class="row mb-4">
-        <div class="col-md-4 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/AlbertoGuillo.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Alberto C. Guillo, MS(Stat) MA(Econ)</h6>
-            <p class="text-center">Executive Vice President</p>
-        </div>
-        <div class="col-md-4 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/EmmanuelDeGuzman.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Emanuel C. De Guzman, Ph.D</h6>
-            <p class="text-center">Vice President for Academic Affairs</p>
-        </div>
-        <div class="col-md-4 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/TomasTestor.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-3 text-center">Tomas O. Testor, MPA</h6>
-            <p class="text-center">Vice President for Student Affairs & Services</p>
-        </div>
-    </div>    
-
-    <div class="row">
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/AnnaGapasin.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Anna Ruby P. Gapasin, DEM</h6>
-            <p class="text-center">Vice President for Research, Extension, & Dev't</p>
-        </div>
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/PascualitoGatan.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Pascualito B. Gatan, MBA</h6>
-            <p class="text-center">Vice President for Branches & Campuses</p>
-        </div>
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/AdamRamilo.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Adam V. Ramilo, MIR</h6>
-            <p class="text-center">Vice President for Administration</p>
-        </div>
-        <div class="col-md-3 d-flex flex-column align-items-center">
-            <img src="{% static 'images/officials/MarisaLegaspi.jpg' %}" alt="Organizational Chart" class="img-thumbnail">
-            <h6 class="mt-2 text-center">Marisa J. Legaspi, CPA</h6>
-            <p class="text-center">Vice President for Finance</p>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>
